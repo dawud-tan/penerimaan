@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://akta-bawah-tangan.ip-dynamic.com/sitemap.xml

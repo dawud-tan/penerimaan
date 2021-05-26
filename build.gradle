@@ -1,0 +1,34 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.4.5'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    archiveBaseName = 'penerimaan'
+    archiveVersion =  '0.1'
+}
+
+compileJava {
+  options.compilerArgs.addAll(['--release', '11'])
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.sun.mail:javax.mail:1.6.2'
+    implementation 'javax.activation:activation:1.1.1'
+    implementation 'org.bouncycastle:bcmail-jdk15on:1.68'
+    implementation 'org.springframework.boot:spring-boot-starter-freemarker:2.4.5'
+    implementation 'org.springframework.boot:spring-boot-starter-tomcat:2.4.5'
+    implementation 'org.springframework:spring-webmvc:5.3.6'
+}
